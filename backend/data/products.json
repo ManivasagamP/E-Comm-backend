@@ -1,0 +1,83 @@
+[
+    {
+        "name":"oppo F21s",
+        "price":245.67,
+        "description":"oppo F21s Pro 5G is a gud phone",
+        "ratings":4.5,
+        "images":[
+            {
+                "image":"product_87759895.jpg"
+            }
+        ],
+        "category":"Mobile Phones",
+        "seller":"Amazon",
+        "stock":5,
+        "numofReviews":15,
+        "reviews":[]
+    },
+    {
+        "name":"Reno F21s",
+        "price":245.67,
+        "description":"Reno F21s Pro 5G is a gud phone",
+        "ratings":3.5,
+        "images":[
+            {
+                "image":"product_87753595.jpg"
+            }
+        ],
+        "category":"Mobile Phones",
+        "seller":"Flipkart",
+        "stock":10,
+        "numofReviews":5,
+        "reviews":[]
+    },
+    {
+        "name":"Sam sung",
+        "price":245.70,
+        "description":"sam sung  Pro 5G is a gud phone",
+        "ratings":5,
+        "images":[
+            {
+                "image":"product_86653595.jpg"
+            }
+        ],
+        "category":"Mobile Phones",
+        "seller":"Meesho",
+        "stock":2,
+        "numofReviews":50,
+        "reviews":[]
+    },
+    {
+        "name":"vivo",
+        "price":245.70,
+        "description":"vivo  Pro 5G is a gud phone",
+        "ratings":5,
+        "images":[
+            {
+                "image":"product_8665334595.jpg"
+            }
+        ],
+        "category":"Mobile Phones",
+        "seller":"Amazon",
+        "stock":20,
+        "numofReviews":12,
+        "reviews":[]
+    },
+    {
+        "name":"i Phone",
+        "price":245.70,
+        "description":"i phone  Pro 5G is a gud phone",
+        "ratings":5,
+        "images":[
+            {
+                "image":"product_8653595.jpg"
+            }
+        ],
+        "category":"Mobile Phones",
+        "seller":"Flipkart",
+        "stock":8,
+        "numofReviews":12,
+        "reviews":[]
+    }
+
+]
