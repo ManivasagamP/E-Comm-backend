@@ -26,6 +26,22 @@ module.exports = (err,req,res,next) =>{
             error = new ErrorHandler(message,400)
         }
 
+        if(err.code == 11000){
+            let message = `Duplicate ${Object.keys(err.keyValue)} error`;
+            error = new ErrorHandler(message,400)
+        }
+
+        if(err.name == 'JSONWebTokenError'){
+            let message = `JSON Web token is invalid. Try again`;
+            error = new ErrorHandler(message,400)
+        }
+
+        if(err.name == 'TokenExpiredError'){
+            let message = `JSON Web token is Expired. Try again`;
+            error = new ErrorHandler(message,400)
+        }
+
+
         res.status(err.statusCode).json({
             success : false,
             message : error.message || 'Internal server Error',
