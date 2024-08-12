@@ -13,6 +13,7 @@
   "author": "mani_ecom",
   "license": "ISC",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.7",
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
     "crypto": "^1.0.1",
