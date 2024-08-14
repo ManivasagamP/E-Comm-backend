@@ -5,7 +5,7 @@ export default function Header () {
     <nav className="navbar row">
         <div className="col-12 col-md-3">
            <div className="navbar-brand">
-             <img width="100px" height="40px"  src="/images/logo.png" />
+             <img width="100px" height="40px" alt='Ecom Cart Logo' src="/images/logo.png" />
         </div>
       </div>
 
