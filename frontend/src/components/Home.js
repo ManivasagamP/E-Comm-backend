@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import MetaData from "./Layouts/MetaData";
-import { getProducts } from "../actions/productsActions";
+import { getProducts } from "../actions/productActions";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "./Layouts/Loader";
 import Product from "./product/Product";
