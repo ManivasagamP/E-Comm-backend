@@ -20,7 +20,7 @@ export default function Home() {
         if(error){
             return toast.error(error)
         }
-        dispatch(getProducts(currentPage));
+        dispatch(getProducts(null,null,null,null, currentPage));
     },[error, dispatch, currentPage])
 
     return (
@@ -32,7 +32,7 @@ export default function Home() {
                     <section id="products" className="container mt-5">
                         <div className="row">
                             {products && products.map(product => (
-                                <Product key={product._id} product={product}/>
+                                <Product col={3} key={product._id} product={product}/>
                             ))}
                         </div>
                     </section>
