@@ -2,7 +2,7 @@ import {Fragment, useEffect, useState} from 'react';
 import MetaData from '../Layouts/MetaData';
 import { clearAuthError, login } from '../../actions/userActions';
 import { useDispatch, useSelector} from 'react-redux';
-import {useNavigate} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 
@@ -76,7 +76,7 @@ export default function Login(){
                             LOGIN
                         </button>
 
-                        <a href="#" className="float-right mt-3">New User?</a>
+                        <Link to={"/register"} href="#" className="float-right mt-3">New User?</Link>
                     </form>
                 </div>
             </div>

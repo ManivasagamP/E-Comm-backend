@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     },
     email:{
         type: String,
-        required: [true,"Please enter Email"],
+        required: [true,"Please enter email"],
         unique: true,
         validate: [validator.isEmail,'Please enter valid Email Address']
     },
@@ -22,8 +22,7 @@ const userSchema = new mongoose.Schema({
         select:false
     },
     avatar:{
-        type: String,
-        required: true
+        type: String
     },
     role:{
         type: String,
@@ -51,7 +50,7 @@ userSchema.methods.getJwtToken = function(){
 }
 
 userSchema.methods.isValidPassword = async function(enteredPassword){
-    return bcrypt.compare(enteredPassword,this.password)
+    return bcrypt.compare(enteredPassword, this.password)
 }
 
 
