@@ -11,22 +11,20 @@ export default function Register(){
         password: ""
     });
     const [avatar,setAvatar] = useState("");
-    const [avatarPreview, setAvatarPreview] = useState("/images/default_avatar.png");
+    const [avatarPreview, setAvatarPreview] = useState("/images/default_avatar.jpg");
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {loading, error, isAuthenticated} = useSelector(state => state.authState)
 
     const onChange = (e) =>{
         if(e.target.name === 'avatar'){
-            const reader = new FileReader;
+            const reader = new FileReader();
             reader.onload = () => {
                 if(reader.readyState === 2){
                     setAvatarPreview(reader.result);
                     setAvatar(e.target.files[0])
                 }
             }
-
-
             reader.readAsDataURL(e.target.files[0])
         }else{
             setUserData({...userData,[e.target.name]: e.target.value})
@@ -58,7 +56,7 @@ export default function Register(){
             })
             return
         }
-    },[error, isAuthenticated])
+    },[error, isAuthenticated, dispatch, navigate])
 
     return(
         <div className="row wrapper">
@@ -103,7 +101,7 @@ export default function Register(){
                                     <img
                                         src={avatarPreview}
                                         className='rounded-circle'
-                                        alt='image'
+                                        alt='pic'
                                     />
                                 </figure>
                             </div>
