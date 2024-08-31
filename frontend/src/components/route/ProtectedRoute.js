@@ -1,11 +1,20 @@
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
+import Loader from '../Layouts/Loader'
 
 export default function ProtectedRoute ({children}){
-    const {isAuthenticated} =  useSelector(state => state.authState);
+    const {isAuthenticated, loading} =  useSelector(state => state.authState);
 
-    if(!isAuthenticated){
+    if(!isAuthenticated && !loading){
         return <Navigate to="/login"/>
+    }
+
+    if(isAuthenticated){
+        return children;
+    }
+
+    if(loading){
+        return <Loader />
     }
 
     return children;

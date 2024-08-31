@@ -2,7 +2,7 @@ import {Fragment, useEffect, useState} from 'react';
 import MetaData from '../Layouts/MetaData';
 import { clearAuthError, login } from '../../actions/userActions';
 import { useDispatch, useSelector} from 'react-redux';
-import {Link, useNavigate} from 'react-router-dom';
+import {Link, useLocation, useNavigate} from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 
@@ -11,8 +11,10 @@ export default function Login(){
     const [password,setPassword] = useState("");
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const location = useLocation();
 
-    const {loading, error, isAuthenticated} = useSelector(state => state.authState)
+    const {loading, error, isAuthenticated} = useSelector(state => state.authState);
+    const redirect = location.search?'/'+location.search.split('=')[1]:'/';
 
     const submitHandler =(e) =>{
         e.preventDefault();
@@ -21,7 +23,7 @@ export default function Login(){
 
     useEffect(() => {
         if(isAuthenticated){
-            navigate('/')
+            navigate(redirect)
         }
 
         if(error){
@@ -33,7 +35,7 @@ export default function Login(){
             })
             return
         }
-    },[error,isAuthenticated, dispatch])
+    },[error,isAuthenticated, dispatch, navigate])
 
 
     return(
