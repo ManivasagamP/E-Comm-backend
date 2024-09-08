@@ -1,5 +1,5 @@
 import { Fragment, useEffect} from 'react'
-import MetaData from '../layouts/MetaData';
+import MetaData from '../Layouts/MetaData';
 import {MDBDataTable} from 'mdbreact'
 import { useDispatch, useSelector } from 'react-redux';
 import { userOrders as userOrdersAction } from '../../actions/orderActions';
@@ -11,7 +11,7 @@ export default function UserOrders () {
 
     useEffect(() => {
         dispatch(userOrdersAction)
-    },[])
+    },[dispatch])
 
     const setOrders = () => {
         const data = {

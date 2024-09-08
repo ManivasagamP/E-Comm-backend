@@ -1,4 +1,4 @@
-import MetaData from '../layouts/MetaData';
+import MetaData from '../Layouts/MetaData'
 import { Fragment, useEffect } from 'react';
 import { validateShipping } from './Shipping';
 import { useSelector } from 'react-redux';
@@ -29,7 +29,7 @@ export default function ConfirmOrder () {
 
     useEffect(()=>{
         validateShipping(shippingInfo, navigate)
-    },[])
+    },[navigate, shippingInfo])
 
     return (
         <Fragment>
