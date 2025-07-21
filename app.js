@@ -5,7 +5,7 @@ const errorMiddleware = require('./middlewares/error')
 const cookieParser = require('cookie-parser');
 const path = require('path');
 
-dotenv.config({path:path.join(__dirname,"config/config.env")});
+dotenv.config({path:path.join(__dirname,".env")});
 
 app.use(express.json());
 app.use(cookieParser());
